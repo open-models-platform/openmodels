@@ -1,0 +1,24 @@
+{
+  "folders": [
+    {
+      "name": "project-root",
+      "path": "./"
+    },
+    {
+      "name": "test-client",
+      "path": "app"
+    },
+    {
+      "name": "openmodels-functions",
+      "path": "openmodels/functions"
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "node_modules/": true,
+      "app/": true,
+      "openmodels/functions/": true
+    },
+    "deno.importMap": "./openmodels/functions/import_map.json"
+  }
+}

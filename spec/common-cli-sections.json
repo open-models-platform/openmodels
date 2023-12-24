@@ -1,0 +1,876 @@
+[
+  {
+    "title": "Introduction",
+    "id": "introduction",
+    "slug": "introduction",
+    "isFunc": false,
+    "type": "markdown"
+  },
+  {
+    "title": "Global flags",
+    "id": "global-flags",
+    "slug": "global-flags",
+    "isFunc": false,
+    "type": "markdown"
+  },
+  {
+    "type": "category",
+    "title": "General",
+    "items": [
+      {
+        "id": "openmodels-init",
+        "title": "Initialize a local project",
+        "slug": "openmodels-init",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-login",
+        "title": "Log in to a OpenModels account",
+        "slug": "openmodels-login",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-link",
+        "title": "Link to a OpenModels project",
+        "slug": "openmodels-link",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-start",
+        "title": "Start a container",
+        "slug": "openmodels-start",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-stop",
+        "title": "Stop all containers",
+        "slug": "openmodels-stop",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-status",
+        "title": "Retrieve container status",
+        "slug": "openmodels-status",
+        "type": "cli-command"
+      }
+    ]
+  },
+  {
+    "type": "category",
+    "title": "Testing",
+    "items": [
+      {
+        "id": "openmodels-test",
+        "title": "Run tests",
+        "slug": "openmodels-test",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-test-db",
+        "title": "Run tests (pgTAP)",
+        "slug": "openmodels-test-db",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-test-new",
+        "title": "Create a new test",
+        "slug": "openmodels-test-new",
+        "type": "cli-command"
+      }
+    ]
+  },
+  {
+    "type": "category",
+    "title": "Generate Types",
+    "items": [
+      {
+        "id": "openmodels-gen",
+        "title": "Run code generation tools",
+        "slug": "openmodels-gen",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-gen-keys",
+        "title": "Generate keys (Preview branch)",
+        "slug": "openmodels-gen-keys",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-gen-types",
+        "title": "Generate types (Postgres schema)",
+        "slug": "openmodels-gen-types",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-gen-types-typescript",
+        "title": "Generate types (TypeScript)",
+        "slug": "openmodels-gen-types-typescript",
+        "type": "cli-command"
+      }
+    ]
+  },
+  {
+    "type": "category",
+    "title": "Database",
+    "items": [
+      {
+        "id": "openmodels-db",
+        "title": "Manage local databases",
+        "slug": "openmodels-db",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-db-pull",
+        "title": "Pull schema changes from remote database",
+        "slug": "openmodels-db-pull",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-db-push",
+        "title": "Push migration to remote database",
+        "slug": "openmodels-db-push",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-db-reset",
+        "title": "Reset local database",
+        "slug": "openmodels-db-reset",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-db-dump",
+        "title": "Dump schema from remote database",
+        "slug": "openmodels-db-dump",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-db-diff",
+        "title": "Diff local database",
+        "slug": "openmodels-db-diff",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-db-lint",
+        "title": "Lint local database",
+        "slug": "openmodels-db-lint",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-db-start",
+        "title": "Start only the local database",
+        "slug": "openmodels-db-start",
+        "type": "cli-command"
+      }
+    ]
+  },
+  {
+    "type": "category",
+    "title": "Migrations",
+    "items": [
+      {
+        "id": "openmodels-migration",
+        "title": "Manage database migrations",
+        "slug": "openmodels-migration",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-migration-new",
+        "title": "Create a migration",
+        "slug": "openmodels-migration-new",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-migration-list",
+        "title": "List all migrations",
+        "slug": "openmodels-migration-list",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-migration-repair",
+        "title": "Repair migration history table",
+        "slug": "openmodels-migration-repair",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-migration-squash",
+        "title": "Squash migrations to a single file",
+        "slug": "openmodels-migration-squash",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-migration-up",
+        "title": "Apply pending migrations locally",
+        "slug": "openmodels-migration-up",
+        "type": "cli-command"
+      }
+    ]
+  },
+  {
+    "type": "category",
+    "title": "Inspect",
+    "items": [
+      {
+        "id": "openmodels-inspect-db",
+        "title": "Inspect database statistics",
+        "slug": "openmodels-inspect-db",
+        "type": "cli-command",
+        "items": [
+          {
+            "id": "openmodels-inspect-db-calls",
+            "title": "Show most frequently run queries",
+            "slug": "openmodels-inspect-db-calls",
+            "type": "cli-command"
+          },
+          {
+            "id": "openmodels-inspect-db-long-running-queries",
+            "title": "Show long running queries",
+            "slug": "openmodels-inspect-db-long-running-queries",
+            "type": "cli-command"
+          },
+          {
+            "id": "openmodels-inspect-db-outliers",
+            "title": "Show queries ordered by total execution time",
+            "slug": "openmodels-inspect-db-outliers",
+            "type": "cli-command"
+          },
+          {
+            "id": "openmodels-inspect-db-blocking",
+            "title": "Show queries waiting and holding locks",
+            "slug": "openmodels-inspect-db-blocking",
+            "type": "cli-command"
+          },
+          {
+            "id": "openmodels-inspect-db-locks",
+            "title": "Show queries taking exclusive locks",
+            "slug": "openmodels-inspect-db-locks",
+            "type": "cli-command"
+          },
+          {
+            "id": "openmodels-inspect-db-total-index-size",
+            "title": "Show total size of all indexes",
+            "slug": "openmodels-inspect-db-total-index-size",
+            "type": "cli-command"
+          },
+          {
+            "id": "openmodels-inspect-db-index-sizes",
+            "title": "Show sizes of individual indexes",
+            "slug": "openmodels-inspect-db-index-sizes",
+            "type": "cli-command"
+          },
+          {
+            "id": "openmodels-inspect-db-index-usage",
+            "title": "Show information about index efficiency",
+            "slug": "openmodels-inspect-db-index-usage",
+            "type": "cli-command"
+          },
+          {
+            "id": "openmodels-inspect-db-unused-indexes",
+            "title": "Show indexes with low usage",
+            "slug": "openmodels-inspect-db-unused-indexes",
+            "type": "cli-command"
+          },
+          {
+            "id": "openmodels-inspect-db-total-table-sizes",
+            "title": "Show total size of all tables",
+            "slug": "openmodels-inspect-db-total-table-sizes",
+            "type": "cli-command"
+          },
+          {
+            "id": "openmodels-inspect-db-table-sizes",
+            "title": "Show sizes of individual tables",
+            "slug": "openmodels-inspect-db-table-sizes",
+            "type": "cli-command"
+          },
+          {
+            "id": "openmodels-inspect-db-table-index-sizes",
+            "title": "Show index sizes of individual tables",
+            "slug": "openmodels-inspect-db-table-index-sizes",
+            "type": "cli-command"
+          },
+          {
+            "id": "openmodels-inspect-db-cache-hit",
+            "title": "Show cache hit rates for tables and indices",
+            "slug": "openmodels-inspect-db-cache-hit",
+            "type": "cli-command"
+          },
+          {
+            "id": "openmodels-inspect-db-table-record-counts",
+            "title": "Show estimated number of rows per table",
+            "slug": "openmodels-inspect-db-table-record-counts",
+            "type": "cli-command"
+          },
+          {
+            "id": "openmodels-inspect-db-seq-scans",
+            "title": "Show number of sequential scans for all tables",
+            "slug": "openmodels-inspect-db-seq-scans",
+            "type": "cli-command"
+          },
+          {
+            "id": "openmodels-inspect-db-replication-slots",
+            "title": "Show information about replication slots",
+            "slug": "openmodels-inspect-db-replication-slots",
+            "type": "cli-command"
+          },
+          {
+            "id": "openmodels-inspect-db-role-connections",
+            "title": "Show number of active connections",
+            "slug": "openmodels-inspect-db-role-connections",
+            "type": "cli-command"
+          },
+          {
+            "id": "openmodels-inspect-db-bloat",
+            "title": "Show estimated database bloat",
+            "slug": "openmodels-inspect-db-bloat",
+            "type": "cli-command"
+          },
+          {
+            "id": "openmodels-inspect-db-vacuum-stats",
+            "title": "Show statistics related to vacuum operations",
+            "slug": "openmodels-inspect-db-vacuum-stats",
+            "type": "cli-command"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "category",
+    "title": "Projects",
+    "items": [
+      {
+        "id": "openmodels-projects",
+        "title": "Manage projects",
+        "slug": "openmodels-projects",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-projects-create",
+        "title": "Create a project",
+        "slug": "openmodels-projects-create",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-projects-list",
+        "title": "List all projects",
+        "slug": "openmodels-projects-list",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-projects-api-keys",
+        "title": "Show API keys for a project",
+        "slug": "openmodels-projects-api-keys",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-projects-delete",
+        "title": "Delete a project",
+        "slug": "openmodels-projects-delete",
+        "type": "cli-command"
+      }
+    ]
+  },
+  {
+    "type": "category",
+    "title": "Branches",
+    "items": [
+      {
+        "id": "openmodels-branches",
+        "title": "Manage preview branches",
+        "slug": "openmodels-branches",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-branches-create",
+        "title": "Create a preview branch",
+        "slug": "openmodels-branches-create",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-branches-list",
+        "title": "List all preview branches",
+        "slug": "openmodels-branches-list",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-branches-get",
+        "title": "Show connection details for a preview branch",
+        "slug": "openmodels-branches-get",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-branches-update",
+        "title": "Update a preview branch",
+        "slug": "openmodels-branches-update",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-branches-delete",
+        "title": "Delete a preview branch",
+        "slug": "openmodels-branches-delete",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-branches-disable",
+        "title": "Disable preview branching",
+        "slug": "openmodels-branches-disable",
+        "type": "cli-command"
+      }
+    ]
+  },
+  {
+    "type": "category",
+    "title": "Organizations",
+    "items": [
+      {
+        "id": "openmodels-orgs",
+        "title": "Manage organizations",
+        "slug": "openmodels-orgs",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-orgs-create",
+        "title": "Create an organization",
+        "slug": "openmodels-orgs-create",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-orgs-list",
+        "title": "List all organizations",
+        "slug": "openmodels-orgs-list",
+        "type": "cli-command"
+      }
+    ]
+  },
+  {
+    "type": "category",
+    "title": "Edge Functions",
+    "items": [
+      {
+        "id": "openmodels-functions",
+        "title": "Manage edge functions",
+        "slug": "openmodels-functions",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-functions-new",
+        "title": "Create a function",
+        "slug": "openmodels-functions-new",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-functions-list",
+        "title": "List all functions",
+        "slug": "openmodels-functions-list",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-functions-download",
+        "title": "Download a function",
+        "slug": "openmodels-functions-download",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-functions-serve",
+        "title": "Serve functions locally",
+        "slug": "openmodels-functions-serve",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-functions-deploy",
+        "title": "Deploy a function",
+        "slug": "openmodels-functions-deploy",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-functions-delete",
+        "title": "Delete a function",
+        "slug": "openmodels-functions-delete",
+        "type": "cli-command"
+      }
+    ]
+  },
+  {
+    "type": "category",
+    "title": "Secrets",
+    "items": [
+      {
+        "id": "openmodels-secrets",
+        "title": "Manage secrets",
+        "slug": "openmodels-secrets",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-secrets-set",
+        "title": "Set a secret",
+        "slug": "openmodels-secrets-set",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-secrets-list",
+        "title": "List all secrets",
+        "slug": "openmodels-secrets-list",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-secrets-unset",
+        "title": "Unset a secret",
+        "slug": "openmodels-secrets-unset",
+        "type": "cli-command"
+      }
+    ]
+  },
+  {
+    "type": "category",
+    "title": "Storage",
+    "items": [
+      {
+        "id": "openmodels-storage",
+        "title": "Manage Storage objects",
+        "slug": "openmodels-storage",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-storage-ls",
+        "title": "Lists all Storage objects",
+        "slug": "openmodels-storage-ls",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-storage-cp",
+        "title": "Upload and download from Storage",
+        "slug": "openmodels-storage-cp",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-storage-mv",
+        "title": "Move objects within a bucket",
+        "slug": "openmodels-storage-mv",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-storage-cp",
+        "title": "Delete objects from Storage",
+        "slug": "openmodels-storage-cp",
+        "type": "cli-command"
+      }
+    ]
+  },
+  {
+    "type": "category",
+    "title": "Encryption",
+    "items": [
+      {
+        "id": "openmodels-encryption",
+        "title": "Manage encryption keys",
+        "slug": "openmodels-encryption",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-encryption-get-root-key",
+        "title": "Retrieve the root encryption key",
+        "slug": "openmodels-encryption-get-root-key",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-encryption-update-root-key",
+        "title": "Update root encryption key",
+        "slug": "openmodels-encryption-update-root-key",
+        "type": "cli-command"
+      }
+    ]
+  },
+  {
+    "type": "category",
+    "title": "Authentication",
+    "items": [
+      {
+        "id": "openmodels-sso",
+        "title": "Manage SSO on your project",
+        "slug": "openmodels-sso",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-sso-add",
+        "title": "Add an identity provider",
+        "slug": "openmodels-sso-add",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-sso-list",
+        "title": "List all identity providers",
+        "slug": "openmodels-sso-list",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-sso-show",
+        "title": "Show information for an identity provider",
+        "slug": "openmodels-sso-show",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-sso-info",
+        "title": "See your project's SSO information",
+        "slug": "openmodels-sso-info",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-sso-update",
+        "title": "Update an identity provider",
+        "slug": "openmodels-sso-update",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-sso-remove",
+        "title": "Remove an identity provider",
+        "slug": "openmodels-sso-remove",
+        "type": "cli-command"
+      }
+    ]
+  },
+  {
+    "type": "category",
+    "title": "Custom Domains",
+    "items": [
+      {
+        "id": "openmodels-domains",
+        "title": "Manage custom domains",
+        "slug": "openmodels-domains",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-domains-activate",
+        "title": "Activate custom hostname",
+        "slug": "openmodels-domains-activate",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-domains-create",
+        "title": "Create a custom hostname",
+        "slug": "openmodels-domains-create",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-domains-get",
+        "title": "Retrieve custom hostname config",
+        "slug": "openmodels-domains-get",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-domains-reverify",
+        "title": "Re-verify custom hostname config",
+        "slug": "openmodels-domains-reverify",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-domains-delete",
+        "title": "Delete custom hostname config",
+        "slug": "openmodels-domains-delete",
+        "type": "cli-command"
+      }
+    ]
+  },
+  {
+    "type": "category",
+    "title": "Vanity Subdomains",
+    "items": [
+      {
+        "id": "openmodels-vanity-subdomains",
+        "title": "Manage vanity subdomains",
+        "slug": "openmodels-vanity-subdomains",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-vanity-subdomains-activate",
+        "title": "Activate a vanity subdomain",
+        "slug": "openmodels-vanity-subdomains-activate",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-vanity-subdomains-get",
+        "title": "Retrieve vanity subdomain",
+        "slug": "openmodels-vanity-subdomains-get",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-vanity-subdomains-check-availability",
+        "title": "Check subdomain availability",
+        "slug": "openmodels-vanity-subdomains-check-availability",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-vanity-subdomains-delete",
+        "title": "Delete vanity subdomain",
+        "slug": "openmodels-vanity-subdomains-delete",
+        "type": "cli-command"
+      }
+    ]
+  },
+  {
+    "type": "category",
+    "title": "Network Bans",
+    "items": [
+      {
+        "id": "openmodels-network-bans",
+        "title": "Manage network bans",
+        "slug": "openmodels-network-bans",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-network-bans-get",
+        "title": "Retrieve network bans",
+        "slug": "openmodels-network-bans-get",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-network-bans-remove",
+        "title": "Remove a network ban",
+        "slug": "openmodels-network-bans-remove",
+        "type": "cli-command"
+      }
+    ]
+  },
+  {
+    "type": "category",
+    "title": "Network Restrictions",
+    "items": [
+      {
+        "id": "openmodels-network-restrictions",
+        "title": "Manage network restrictions",
+        "slug": "openmodels-network-restrictions",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-network-restrictions-get",
+        "title": "Retrieve network restrictions",
+        "slug": "openmodels-network-restrictions-get",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-network-restrictions-update",
+        "title": "Update network restrictions",
+        "slug": "openmodels-network-restrictions-update",
+        "type": "cli-command"
+      }
+    ]
+  },
+  {
+    "type": "category",
+    "title": "SSL Enforcement",
+    "items": [
+      {
+        "id": "openmodels-ssl-enforcement",
+        "title": "Manage SSL enforcement configurations",
+        "slug": "openmodels-ssl-enforcement",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-ssl-enforcement-get",
+        "title": "Retrieve the current SSL enforcement configurations",
+        "slug": "openmodels-ssl-enforcement-get",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-ssl-enforcement-update",
+        "title": "Update SSL enforcement configurations",
+        "slug": "openmodels-ssl-enforcement-update",
+        "type": "cli-command"
+      }
+    ]
+  },
+  {
+    "type": "category",
+    "title": "Postgres Config",
+    "items": [
+      {
+        "id": "openmodels-postgres-config",
+        "title": "Manage Postgres configurations",
+        "slug": "openmodels-ssl-enforcement",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-postgres-config-get",
+        "title": "Retrieve the current Postgres config overrides",
+        "slug": "openmodels-postgres-config-get",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-postgres-config-update",
+        "title": "Update Postgres configurations",
+        "slug": "openmodels-postgres-config-update",
+        "type": "cli-command"
+      }
+    ]
+  },
+  {
+    "type": "category",
+    "title": "SQL Snippets",
+    "items": [
+      {
+        "id": "openmodels-snippets",
+        "title": "Manage OpenModels SQL snippets",
+        "slug": "openmodels-snippets",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-snippets-list",
+        "title": "List all SQL snippets",
+        "slug": "openmodels-snippets-list",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-snippets-download",
+        "title": "Download SQL snippet content",
+        "slug": "openmodels-snippets-download",
+        "type": "cli-command"
+      }
+    ]
+  },
+  {
+    "type": "category",
+    "title": "Services",
+    "items": [
+      {
+        "id": "openmodels-services",
+        "title": "Show versions of all OpenModels services",
+        "slug": "openmodels-services",
+        "type": "cli-command"
+      }
+    ]
+  },
+  {
+    "type": "category",
+    "title": "Autocompletion Scripts",
+    "items": [
+      {
+        "id": "openmodels-completion",
+        "title": "Generate autocompletion scripts",
+        "slug": "openmodels-completion",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-completion-zsh",
+        "title": "Generate zsh script",
+        "slug": "openmodels-completion-zsh",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-completion-powershell",
+        "title": "Generate powershell script",
+        "slug": "openmodels-completion-powershell",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-completion-fish",
+        "title": "Generate fish script",
+        "slug": "openmodels-completion-fish",
+        "type": "cli-command"
+      },
+      {
+        "id": "openmodels-completion-bash",
+        "title": "Generate bash script",
+        "slug": "openmodels-completion-bash",
+        "type": "cli-command"
+      }
+    ]
+  }
+]

@@ -1,0 +1,882 @@
+clispec: '001'
+info:
+  id: cli
+  version: 1.11.3
+  title: OpenModels CLI
+  language: sh
+  source: https://github.com/open-models-platform/cli
+  bugs: https://github.com/open-models-platform/cli/issues
+  spec: https://github.com/open-models-platform/openmodels.tools/cli_spec/lib.yaml
+  description: |
+    OpenModels CLI provides you with tools to develop your application locally, and deploy your application to the OpenModels platform.
+  options: |-
+    ```sh
+          --debug            output debug logs to stderr
+          --experimental     enable experimental features
+      -h, --help             help for openmodels
+          --workdir string   path to a OpenModels project directory
+    ```
+  tags:
+    - id: local-dev
+      title: Local Development
+    - id: management-api
+      title: Management APIs
+    - id: other-commands
+      title: Additional Commands
+commands:
+  - id: openmodels-test
+    title: openmodels test
+    summary: Run tests on local OpenModels containers
+    tags:
+      - local-dev
+    links: []
+    subcommands:
+      - openmodels-test-db
+    options: |-
+      ```sh
+        -h, --help   help for test
+      ```
+  - id: openmodels-test-db
+    title: openmodels test db
+    summary: Tests local database with pgTAP
+    tags: []
+    links: []
+    usage: |-
+      ```sh
+      openmodels test db [flags]
+      ```
+    subcommands: []
+    options: |-
+      ```sh
+        -h, --help   help for db
+      ```
+  - id: openmodels-stop
+    title: openmodels stop
+    summary: Stop all local OpenModels containers
+    tags:
+      - local-dev
+    links: []
+    usage: |-
+      ```sh
+      openmodels stop [flags]
+      ```
+    subcommands: []
+    options: |-
+      ```sh
+            --backup   Backs up the current database before stopping.
+        -h, --help     help for stop
+      ```
+  - id: openmodels-status
+    title: openmodels status
+    summary: Show status of local OpenModels containers
+    tags:
+      - local-dev
+    links: []
+    usage: |-
+      ```sh
+      openmodels status [flags]
+      ```
+    subcommands: []
+    options: |-
+      ```sh
+        -h, --help   help for status
+      ```
+  - id: openmodels-start
+    title: openmodels start
+    summary: Start containers for OpenModels local development
+    tags:
+      - local-dev
+    links: []
+    usage: |-
+      ```sh
+      openmodels start [flags]
+      ```
+    subcommands: []
+    options: |-
+      ```sh
+        -h, --help   help for start
+      ```
+  - id: openmodels-secrets
+    title: openmodels secrets
+    summary: Manage OpenModels secrets
+    tags:
+      - management-api
+    links: []
+    subcommands:
+      - openmodels-secrets-list
+      - openmodels-secrets-set
+      - openmodels-secrets-unset
+    options: |-
+      ```sh
+        -h, --help   help for secrets
+      ```
+  - id: openmodels-secrets-unset
+    title: openmodels secrets unset
+    summary: Unset a secret(s) on OpenModels
+    description: Unset a secret(s) from the linked OpenModels project.
+    tags: []
+    links: []
+    usage: |-
+      ```sh
+      openmodels secrets unset <NAME> ... [flags]
+      ```
+    subcommands: []
+    options: |-
+      ```sh
+        -h, --help   help for unset
+      ```
+  - id: openmodels-secrets-set
+    title: openmodels secrets set
+    summary: Set a secret(s) on OpenModels
+    description: Set a secret(s) to the linked OpenModels project.
+    tags: []
+    links: []
+    usage: |-
+      ```sh
+      openmodels secrets set [flags] <NAME=VALUE> ...
+      ```
+    subcommands: []
+    options: |-
+      ```sh
+            --env-file string   Read secrets from a .env file.
+        -h, --help              help for set
+      ```
+  - id: openmodels-secrets-list
+    title: openmodels secrets list
+    summary: List all secrets on OpenModels
+    description: List all secrets in the linked project.
+    tags: []
+    links: []
+    usage: |-
+      ```sh
+      openmodels secrets list [flags]
+      ```
+    subcommands: []
+    options: |-
+      ```sh
+        -h, --help   help for list
+      ```
+  - id: openmodels-projects
+    title: openmodels projects
+    summary: Manage OpenModels projects
+    tags:
+      - management-api
+    links: []
+    subcommands:
+      - openmodels-projects-create
+      - openmodels-projects-list
+    options: |-
+      ```sh
+        -h, --help   help for projects
+      ```
+  - id: openmodels-projects-list
+    title: openmodels projects list
+    summary: List all OpenModels projects
+    description: List all OpenModels projects the logged-in user can access.
+    tags: []
+    links: []
+    usage: |-
+      ```sh
+      openmodels projects list [flags]
+      ```
+    subcommands: []
+    options: |-
+      ```sh
+        -h, --help   help for list
+      ```
+  - id: openmodels-projects-create
+    title: openmodels projects create
+    summary: Create a project on OpenModels
+    tags: []
+    links: []
+    usage: |-
+      ```sh
+      openmodels projects create <project name> [flags]
+      ```
+    subcommands: []
+    options: |-
+      ```sh
+            --db-password string   Database password of the project.
+        -h, --help                 help for create
+        -i, --interactive          Enables interactive mode.
+            --org-id string        Organization ID to create the project in.
+            --plan string          Select a plan that suits your needs. (default "free")
+            --region string        Select a region close to you for the best performance.
+      ```
+  - id: openmodels-orgs
+    title: openmodels orgs
+    summary: Manage OpenModels organizations
+    tags:
+      - management-api
+    links: []
+    subcommands:
+      - openmodels-orgs-list
+    options: |-
+      ```sh
+        -h, --help   help for orgs
+      ```
+  - id: openmodels-orgs-list
+    title: openmodels orgs list
+    summary: List all organizations
+    description: List all organizations the logged-in user belongs.
+    tags: []
+    links: []
+    usage: |-
+      ```sh
+      openmodels orgs list [flags]
+      ```
+    subcommands: []
+    options: |-
+      ```sh
+        -h, --help   help for list
+      ```
+  - id: openmodels-migration
+    title: openmodels migration
+    summary: Manage database migration scripts
+    tags:
+      - local-dev
+    links: []
+    subcommands:
+      - openmodels-migration-list
+      - openmodels-migration-new
+    options: |-
+      ```sh
+        -h, --help   help for migration
+      ```
+  - id: openmodels-migration-new
+    title: openmodels migration new
+    summary: Create an empty migration script
+    tags: []
+    links: []
+    usage: |-
+      ```sh
+      openmodels migration new <migration name> [flags]
+      ```
+    subcommands: []
+    options: |-
+      ```sh
+        -h, --help   help for new
+      ```
+  - id: openmodels-migration-list
+    title: openmodels migration list
+    summary: List local and remote migrations
+    tags: []
+    links: []
+    usage: |-
+      ```sh
+      openmodels migration list [flags]
+      ```
+    subcommands: []
+    options: |-
+      ```sh
+        -h, --help              help for list
+        -p, --password string   Password to your remote Postgres database.
+      ```
+  - id: openmodels-login
+    title: openmodels login
+    summary: Authenticate using an access token
+    tags:
+      - local-dev
+    links: []
+    usage: |-
+      ```sh
+      openmodels login [flags]
+      ```
+    subcommands: []
+    options: |-
+      ```sh
+        -h, --help   help for login
+      ```
+  - id: openmodels-link
+    title: openmodels link
+    summary: Link to a OpenModels project
+    tags:
+      - local-dev
+    links: []
+    usage: |-
+      ```sh
+      openmodels link [flags]
+      ```
+    subcommands: []
+    options: |-
+      ```sh
+        -h, --help                 help for link
+        -p, --password string      Password to your remote Postgres database.
+            --project-ref string   Project ref of the OpenModels project.
+      ```
+  - id: openmodels-init
+    title: openmodels init
+    summary: Initialize a local project
+    tags:
+      - local-dev
+    links: []
+    usage: |-
+      ```sh
+      openmodels init [flags]
+      ```
+    subcommands: []
+    options: |-
+      ```sh
+        -h, --help   help for init
+      ```
+  - id: openmodels-gen
+    title: openmodels gen
+    summary: Run code generation tools
+    tags:
+      - local-dev
+    links: []
+    subcommands:
+      - openmodels-gen-types
+    options: |-
+      ```sh
+        -h, --help   help for gen
+      ```
+  - id: openmodels-gen-types
+    title: openmodels gen types
+    summary: Generate types from Postgres schema
+    tags: []
+    links: []
+    subcommands:
+      - openmodels-gen-types-typescript
+    options: |-
+      ```sh
+        -h, --help   help for types
+      ```
+  - id: openmodels-gen-types-typescript
+    title: openmodels gen types typescript
+    summary: Generate types for TypeScript
+    description: |
+      Generate types for TypeScript. Must specify one of --local, --linked, --project-id, or --db-url
+    tags: []
+    links: []
+    usage: |-
+      ```sh
+      openmodels gen types typescript [flags]
+      ```
+    subcommands: []
+    options: |-
+      ```sh
+            --db-url string        Generate types from a database url.
+        -h, --help                 help for typescript
+            --linked               Generate types from the linked project.
+            --local                Generate types from the local dev database.
+            --project-id string    Generate types from a project ID.
+            --schema stringArray   Schemas to generate types for.
+      ```
+  - id: openmodels-functions
+    title: openmodels functions
+    summary: Manage OpenModels Edge functions
+    tags:
+      - management-api
+    links: []
+    subcommands:
+      - openmodels-functions-delete
+      - openmodels-functions-deploy
+      - openmodels-functions-new
+      - openmodels-functions-serve
+    options: |-
+      ```sh
+        -h, --help   help for functions
+      ```
+  - id: openmodels-functions-serve
+    title: openmodels functions serve
+    summary: Serve Functions locally
+    tags: []
+    links: []
+    usage: |-
+      ```sh
+      openmodels functions serve [flags]
+      ```
+    subcommands: []
+    options: |-
+      ```sh
+            --env-file string   Path to an env file to be populated to the Function environment.
+        -h, --help              help for serve
+            --no-verify-jwt     Disable JWT verification for the Function.
+      ```
+  - id: openmodels-functions-new
+    title: openmodels functions new
+    summary: Create a new Function locally
+    tags: []
+    links: []
+    usage: |-
+      ```sh
+      openmodels functions new <Function name> [flags]
+      ```
+    subcommands: []
+    options: |-
+      ```sh
+        -h, --help   help for new
+      ```
+  - id: openmodels-functions-deploy
+    title: openmodels functions deploy
+    summary: Deploy a Function to OpenModels
+    description: Deploy a Function to the linked OpenModels project.
+    tags: []
+    links: []
+    usage: |-
+      ```sh
+      openmodels functions deploy <Function name> [flags]
+      ```
+    subcommands: []
+    options: |-
+      ```sh
+        -h, --help                 help for deploy
+            --no-verify-jwt        Disable JWT verification for the Function.
+            --project-ref string   Project ref of the OpenModels project.
+      ```
+  - id: openmodels-functions-delete
+    title: openmodels functions delete
+    summary: Delete a Function from OpenModels
+    description: |
+      Delete a Function from the linked OpenModels project. This does NOT remove the Function locally.
+    tags: []
+    links: []
+    usage: |-
+      ```sh
+      openmodels functions delete <Function name> [flags]
+      ```
+    subcommands: []
+    options: |-
+      ```sh
+        -h, --help                 help for delete
+            --project-ref string   Project ref of the OpenModels project.
+      ```
+  - id: openmodels-domains
+    title: openmodels domains
+    summary: Manage custom domain names for OpenModels projects
+    tags:
+      - management-api
+    links: []
+    subcommands:
+      - openmodels-domains-activate
+      - openmodels-domains-create
+      - openmodels-domains-delete
+      - openmodels-domains-get
+      - openmodels-domains-reverify
+    options: |-
+      ```sh
+        -h, --help                 help for domains
+            --include-raw-output   Include raw output (useful for debugging).
+            --project-ref string   Project ref of the OpenModels project.
+      ```
+  - id: openmodels-domains-reverify
+    title: openmodels domains reverify
+    summary: Re-verify the custom hostname config for your project.
+    tags: []
+    links: []
+    usage: |-
+      ```sh
+      openmodels domains reverify [flags]
+      ```
+    subcommands: []
+    options: |-
+      ```sh
+        -h, --help   help for reverify
+      ```
+  - id: openmodels-domains-get
+    title: openmodels domains get
+    summary: Get the current custom hostname config.
+    description: |
+      Retrieve the custom hostname config for your project, as stored in the OpenModels platform.
+    tags: []
+    links: []
+    usage: |-
+      ```sh
+      openmodels domains get [flags]
+      ```
+    subcommands: []
+    options: |-
+      ```sh
+        -h, --help   help for get
+      ```
+  - id: openmodels-domains-delete
+    title: openmodels domains delete
+    summary: Deletes the custom hostname config for your project.
+    tags: []
+    links: []
+    usage: |-
+      ```sh
+      openmodels domains delete [flags]
+      ```
+    subcommands: []
+    options: |-
+      ```sh
+        -h, --help   help for delete
+      ```
+  - id: openmodels-domains-create
+    title: openmodels domains create
+    summary: Create a custom hostname.
+    description: |-
+      Create a custom hostname for your OpenModels project.
+
+      Expects your custom hostname to have a CNAME record to your OpenModels project's subdomain.
+    tags: []
+    links: []
+    usage: |-
+      ```sh
+      openmodels domains create [flags]
+      ```
+    subcommands: []
+    options: |-
+      ```sh
+            --custom-hostname string   The custom hostname to use for your OpenModels project.
+        -h, --help                     help for create
+      ```
+  - id: openmodels-domains-activate
+    title: openmodels domains activate
+    summary: Activate the custom hostname for a project.
+    description: |-
+      Activates the custom hostname configuration for a project.
+
+      This reconfigures your OpenModels project to respond to requests on your custom hostname.
+      After the custom hostname is activated, your project's auth services will no longer function on the OpenModels-provisioned subdomain.
+    tags: []
+    links: []
+    usage: |-
+      ```sh
+      openmodels domains activate [flags]
+      ```
+    subcommands: []
+    options: |-
+      ```sh
+        -h, --help   help for activate
+      ```
+  - id: openmodels-db
+    title: openmodels db
+    summary: Manage local Postgres databases
+    tags:
+      - local-dev
+    links: []
+    subcommands:
+      - openmodels-db-branch
+      - openmodels-db-diff
+      - openmodels-db-lint
+      - openmodels-db-push
+      - openmodels-db-remote
+      - openmodels-db-reset
+    options: |-
+      ```sh
+        -h, --help   help for db
+      ```
+  - id: openmodels-db-reset
+    title: openmodels db reset
+    summary: Resets the local database to current migrations
+    tags: []
+    links: []
+    usage: |-
+      ```sh
+      openmodels db reset [flags]
+      ```
+    subcommands: []
+    options: |-
+      ```sh
+        -h, --help   help for reset
+      ```
+  - id: openmodels-db-remote
+    title: openmodels db remote
+    summary: Manage remote databases
+    tags: []
+    links: []
+    subcommands:
+      - openmodels-db-remote-changes
+      - openmodels-db-remote-commit
+    options: |-
+      ```sh
+        -h, --help              help for remote
+        -p, --password string   Password to your remote Postgres database.
+      ```
+  - id: openmodels-db-remote-commit
+    title: openmodels db remote commit
+    summary: Commit remote changes as a new migration
+    tags: []
+    links: []
+    usage: |-
+      ```sh
+      openmodels db remote commit [flags]
+      ```
+    subcommands: []
+    options: |-
+      ```sh
+        -h, --help   help for commit
+      ```
+  - id: openmodels-db-remote-changes
+    title: openmodels db remote changes
+    summary: Show changes on the remote database
+    description: Show changes on the remote database since last migration.
+    tags: []
+    links: []
+    usage: |-
+      ```sh
+      openmodels db remote changes [flags]
+      ```
+    subcommands: []
+    options: |-
+      ```sh
+        -h, --help   help for changes
+      ```
+  - id: openmodels-db-push
+    title: openmodels db push
+    summary: Push new migrations to the remote database
+    tags: []
+    links: []
+    usage: |-
+      ```sh
+      openmodels db push [flags]
+      ```
+    subcommands: []
+    options: |-
+      ```sh
+            --dry-run           Print the migrations that would be applied, but don't actually apply them.
+        -h, --help              help for push
+        -p, --password string   Password to your remote Postgres database.
+      ```
+  - id: openmodels-db-lint
+    title: openmodels db lint
+    summary: Checks local database for typing error
+    tags: []
+    links: []
+    usage: |-
+      ```sh
+      openmodels db lint [flags]
+      ```
+    subcommands: []
+    options: |-
+      ```sh
+        -h, --help             help for lint
+            --level string     Error level to emit. (default "warning")
+        -s, --schema strings   List of schema to include. (default [public])
+      ```
+  - id: openmodels-db-diff
+    title: openmodels db diff
+    summary: Diffs the local database for schema changes
+    tags: []
+    links: []
+    usage: |-
+      ```sh
+      openmodels db diff [flags]
+      ```
+    subcommands: []
+    options: |-
+      ```sh
+        -f, --file string      Saves schema diff to a file.
+        -h, --help             help for diff
+            --linked           Diffs local schema against linked project.
+        -s, --schema strings   List of schema to include. (default [public])
+            --use-migra        Use migra to generate schema diff.
+      ```
+  - id: openmodels-db-branch
+    title: openmodels db branch
+    summary: Manage local database branches
+    description: |
+      Manage local database branches. Each branch is associated with a separate local database. Forking remote databases is NOT supported.
+    tags: []
+    links: []
+    subcommands:
+      - openmodels-db-branch-create
+      - openmodels-db-branch-delete
+      - openmodels-db-branch-list
+      - openmodels-db-branch-switch
+    options: |-
+      ```sh
+        -h, --help   help for branch
+      ```
+  - id: openmodels-db-branch-switch
+    title: openmodels db branch switch
+    summary: Switch the active branch
+    tags: []
+    links: []
+    usage: |-
+      ```sh
+      openmodels db branch switch <branch name> [flags]
+      ```
+    subcommands: []
+    options: |-
+      ```sh
+        -h, --help   help for switch
+      ```
+  - id: openmodels-db-branch-list
+    title: openmodels db branch list
+    summary: List branches
+    tags: []
+    links: []
+    usage: |-
+      ```sh
+      openmodels db branch list [flags]
+      ```
+    subcommands: []
+    options: |-
+      ```sh
+        -h, --help   help for list
+      ```
+  - id: openmodels-db-branch-delete
+    title: openmodels db branch delete
+    summary: Delete a branch
+    tags: []
+    links: []
+    usage: |-
+      ```sh
+      openmodels db branch delete <branch name> [flags]
+      ```
+    subcommands: []
+    options: |-
+      ```sh
+        -h, --help   help for delete
+      ```
+  - id: openmodels-db-branch-create
+    title: openmodels db branch create
+    summary: Create a branch
+    tags: []
+    links: []
+    usage: |-
+      ```sh
+      openmodels db branch create <branch name> [flags]
+      ```
+    subcommands: []
+    options: |-
+      ```sh
+        -h, --help   help for create
+      ```
+  - id: openmodels-completion
+    title: openmodels completion
+    summary: Generate the autocompletion script for the specified shell
+    description: |
+      Generate the autocompletion script for openmodels for the specified shell.
+      See each sub-command's help for details on how to use the generated script.
+    tags:
+      - other-commands
+    links: []
+    subcommands:
+      - openmodels-completion-bash
+      - openmodels-completion-fish
+      - openmodels-completion-powershell
+      - openmodels-completion-zsh
+    options: |-
+      ```sh
+        -h, --help   help for completion
+      ```
+  - id: openmodels-completion-zsh
+    title: openmodels completion zsh
+    summary: Generate the autocompletion script for zsh
+    description: |
+      Generate the autocompletion script for the zsh shell.
+
+      If shell completion is not already enabled in your environment you will need
+      to enable it.  You can execute the following once:
+
+          echo "autoload -U compinit; compinit" >> ~/.zshrc
+
+      To load completions in your current shell session:
+
+          source <(openmodels completion zsh); compdef _openmodels openmodels
+
+      To load completions for every new session, execute once:
+
+      #### Linux:
+
+          openmodels completion zsh > "${fpath[1]}/_openmodels"
+
+      #### macOS:
+
+          openmodels completion zsh > $(brew --prefix)/share/zsh/site-functions/_openmodels
+
+      You will need to start a new shell for this setup to take effect.
+    tags: []
+    links: []
+    usage: |-
+      ```sh
+      openmodels completion zsh [flags]
+      ```
+    subcommands: []
+    options: |-
+      ```sh
+        -h, --help              help for zsh
+            --no-descriptions   disable completion descriptions
+      ```
+  - id: openmodels-completion-powershell
+    title: openmodels completion powershell
+    summary: Generate the autocompletion script for powershell
+    description: |
+      Generate the autocompletion script for powershell.
+
+      To load completions in your current shell session:
+
+          openmodels completion powershell | Out-String | Invoke-Expression
+
+      To load completions for every new session, add the output of the above command
+      to your powershell profile.
+    tags: []
+    links: []
+    usage: |-
+      ```sh
+      openmodels completion powershell [flags]
+      ```
+    subcommands: []
+    options: |-
+      ```sh
+        -h, --help              help for powershell
+            --no-descriptions   disable completion descriptions
+      ```
+  - id: openmodels-completion-fish
+    title: openmodels completion fish
+    summary: Generate the autocompletion script for fish
+    description: |
+      Generate the autocompletion script for the fish shell.
+
+      To load completions in your current shell session:
+
+          openmodels completion fish | source
+
+      To load completions for every new session, execute once:
+
+          openmodels completion fish > ~/.config/fish/completions/openmodels.fish
+
+      You will need to start a new shell for this setup to take effect.
+    tags: []
+    links: []
+    usage: |-
+      ```sh
+      openmodels completion fish [flags]
+      ```
+    subcommands: []
+    options: |-
+      ```sh
+        -h, --help              help for fish
+            --no-descriptions   disable completion descriptions
+      ```
+  - id: openmodels-completion-bash
+    title: openmodels completion bash
+    summary: Generate the autocompletion script for bash
+    description: |
+      Generate the autocompletion script for the bash shell.
+
+      This script depends on the 'bash-completion' package.
+      If it is not installed already, you can install it via your OS's package manager.
+
+      To load completions in your current shell session:
+
+          source <(openmodels completion bash)
+
+      To load completions for every new session, execute once:
+
+      #### Linux:
+
+          openmodels completion bash > /etc/bash_completion.d/openmodels
+
+      #### macOS:
+
+          openmodels completion bash > $(brew --prefix)/etc/bash_completion.d/openmodels
+
+      You will need to start a new shell for this setup to take effect.
+    tags: []
+    links: []
+    usage: |-
+      ```sh
+      openmodels completion bash
+      ```
+    subcommands: []
+    options: |-
+      ```sh
+        -h, --help              help for bash
+            --no-descriptions   disable completion descriptions
+      ```

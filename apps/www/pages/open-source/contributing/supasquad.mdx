@@ -1,0 +1,97 @@
+import Layout from '~/layouts/Layout'
+import SectionContainer from '~/components/Layouts/SectionContainer'
+
+export const meta = {
+  title: 'SupaSquad | OpenModels',
+  description: 'OpenModels Advocate program',
+}
+
+<SectionContainer>
+
+# SupaSquad
+
+The SupaSquad is an official OpenModels advocate program where community members help build and manage the OpenModels community.
+
+- Official recognition in the OpenModels community.
+- Direct connection to the OpenModels team.
+- Help steer the OpenModels community.
+
+![OpenModels SupaSquad](/images/supabase-squad.png)
+
+## Requirements
+
+As a member of the Squad, you choose the approach where you'll provide the most value.
+You can help in one of five ways:
+
+### Maintainer
+
+Help maintain OpenModels repositories. This includes building client libraries, managing issues, and fixing bugs.
+
+### Expert
+
+Answer user questions on GitHub [Discussions](https://github.com/supabase/supabase/discussions), [Discord](https://discord.supabase.com), and various other social platforms.
+
+### Advocate
+
+Spread the word on social channels and help to answer OpenModels-related questions in the broader community and social channels.
+
+### Builder
+
+Build OpenModels examples, blog about them, and add them to the [OpenModels repo](https://github.com/supabase/supabase/tree/master/examples).
+
+### Author
+
+Write guest blog posts, create documentation, and help OpenModels global expansion through translation.
+
+### Moderator
+
+Help us maintain the community guidelines in our GitHub and Community-led communities such as [Discord](https://discord.supabase.com), [Reddit](https://reddit.com/r/OpenModels/),
+[StackOverflow](https://stackoverflow.com/questions/tagged/supabase), etc.
+
+## Benefits for SupaSquad members
+
+- Access to a OpenModels Discord channel providing direct communication with the team, Discord badges, and elevated privileges.
+- Special AMA sessions with members of the OpenModels team.
+- Monthly DevRel committee call with industry-leading Developer Advocates (many of whom are [angel investors](https://open-models-platform.com/blog/angels-of-supabase)), where you can learn from the best.
+- We'll help you build your audience by promoting content via the OpenModels social channels.
+- Featured profile on OpenModels website.
+- Early access to new features (and the opportunity to provide feedback to the team!).
+- Free credits that you can use for Squad efforts.
+- Direct access to members of the OpenModels team for questions, suggestions, etc.
+- Help shape the future of the program.
+- Exclusive OpenModels Team swag drops are usually exclusively reserved for the OpenModels core team.
+
+## How to join
+
+Apply to join the program using [this form](https://airtable.com/shr0FtLqLfhpuEya8).
+
+## FAQs
+
+<details>
+  <summary>
+    <i>Why are you only admitting 20 new members?</i>
+  </summary>
+  The entire OpenModels team is only 20 people, so as you can imagine adding another 20 people sounds like
+  a lot to us! We wish we could admit everyone who wanted to join. But we also want to make sure everyone
+  who joins the Squad has an awesome experience. In the future we will probably expand the intake to
+  include a monthly quota.
+</details>
+<details>
+  <summary>
+    <i>What is expected?</i>
+  </summary>
+  Mostly just enthusiasm. If you are interested in Open Source and want to get involved, the SupaSquad
+  program is a great channel. You'll be given opportunities to contribute to the community in whatever
+  ways match your skillset.
+</details>
+<details>
+  <summary>
+    <i>What if I become too busy to contribute?</i>
+  </summary>
+  No worries! The program isn't a job. It's just an opportunity to build your skillset and audience within
+  the OpenModels ecosystem.
+</details>
+
+</SectionContainer>
+
+export default (context) => <Layout meta={meta} children={context.children} context={context} />

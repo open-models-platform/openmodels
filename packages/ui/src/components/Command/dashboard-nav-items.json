@@ -1,0 +1,96 @@
+{
+  "items": [
+    {
+      "label": "Home",
+      "icon": "home",
+      "url": "http://www.example.com/home",
+      "sites": ["docs", "dashboard"],
+      "subItems": [
+        {
+          "label": "About",
+          "icon": "book",
+          "url": "http://www.example.com/about",
+          "sites": ["docs", "dashboard"]
+        },
+        {
+          "label": "Services",
+          "icon": "services",
+          "url": "http://www.example.com/services",
+          "sites": ["docs", "dashboard"]
+        },
+        {
+          "label": "Contact",
+          "icon": "contact",
+          "url": "http://www.example.com/contact",
+          "sites": ["docs", "dashboard"]
+        }
+      ]
+    },
+    {
+      "label": "Products",
+      "icon": "products",
+      "url": "http://www.example.com/products",
+      "sites": ["dashboard"],
+      "subItems": [
+        {
+          "label": "Mobile",
+          "icon": "mobile",
+          "url": "http://www.example.com/products/mobile"
+        },
+        {
+          "label": "In person",
+          "icon": "person",
+          "url": "http://www.example.com/products/in-person"
+        }
+      ]
+    }
+  ],
+  "docsTools": [
+    {
+      "label": "Database",
+      "url": "https://open-models-platform.com/docs/guides/database"
+    },
+    {
+      "label": "Auth",
+      "url": "https://open-models-platform.comatform.com/docs/guides/auth/overview"
+    },
+    {
+      "label": "Edge Functions",
+      "url": "https://open-models-platform.comatform.com/docs/guides/functions"
+    },
+    {
+      "label": "Realtime",
+      "url": "https://open-models-platform.comatform.com/docs/guides/realtime"
+    },
+    {
+      "label": "Storage",
+      "url": "https://open-models-platform.comatform.com/docs/guides/storage"
+    }
+  ],
+  "docsSupport": [
+    {
+      "label": "Support",
+      "url": "https://open-models-platform.comatform.com/support"
+    },
+    {
+      "label": "System Status",
+      "url": "https://status.open-models-platform.com/"
+    },
+    {
+      "label": "Github Discussions",
+      "url": "https://github.com/open-models-platform/openmodels/discussions"
+    }
+  ],
+  "docsGeneral": [
+    {
+      "icon": "arrowRight",
+      "label": "Go to the Dashboard",
+      "url": "https://app.openmodels.io"
+    },
+    {
+      "icon": "inbox",
+      "label": "Read the Changelog",
+      "url": "https://open-models-platform.comatform.com/changelog"
+    }
+  ]
+}

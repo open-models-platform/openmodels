@@ -1,0 +1,213 @@
+clisCommon: '001'
+commands:
+  - id: openmodels-test
+    title: openmodels test
+    product: 'general'
+
+  - id: openmodels-login
+    title: openmodels login
+    product: 'general'
+
+  - id: openmodels-link
+    title: openmodels link
+    product: 'general'
+
+  - id: openmodels-init
+    title: openmodels init
+    product: 'general'
+
+  - id: openmodels-test-db
+    title: openmodels test db
+    product: 'general'
+
+  - id: openmodels-stop
+    title: openmodels stop
+    product: 'general'
+
+  - id: openmodels-status
+    title: openmodels status
+    product: 'general'
+
+  - id: openmodels-start
+    title: openmodels start
+    product: 'general'
+
+  - id: openmodels-gen
+    title: openmodels gen
+    product: 'general'
+
+  - id: openmodels-gen-types
+    title: openmodels gen types
+    product: 'general'
+
+  - id: openmodels-gen-types-typescript
+    title: openmodels gen types typescript
+    product: 'general'
+
+  - id: openmodels-secrets
+    title: openmodels secrets
+    product: 'secrets'
+
+  - id: openmodels-secrets-unset
+    title: openmodels secrets unset
+    product: 'secrets'
+
+  - id: openmodels-secrets-set
+    title: openmodels secrets set
+    product: 'secrets'
+
+  - id: openmodels-secrets-list
+    title: openmodels secrets list
+    product: 'secrets'
+
+  - id: openmodels-projects
+    title: openmodels projects
+    product: 'projects'
+
+  - id: openmodels-projects-list
+    title: openmodels projects list
+    product: 'projects'
+
+  - id: openmodels-projects-create
+    title: openmodels projects create
+    product: 'projects'
+
+  - id: openmodels-orgs
+    title: openmodels orgs
+    product: 'organizations'
+
+  - id: openmodels-orgs-list
+    title: openmodels orgs list
+    product: 'organizations'
+
+  - id: openmodels-migration
+    title: openmodels migration
+    product: 'migration'
+
+  - id: openmodels-migration-new
+    title: openmodels migration new
+    product: 'migration'
+
+  - id: openmodels-migration-list
+    title: openmodels migration list
+    product: 'migration'
+
+  - id: openmodels-functions
+    title: openmodels functions
+    product: 'functions'
+
+  - id: openmodels-functions-serve
+    title: openmodels functions serve
+    product: 'functions'
+
+  - id: openmodels-functions-new
+    title: openmodels functions new
+    product: 'functions'
+
+  - id: openmodels-functions-deploy
+    title: openmodels functions deploy
+    product: 'functions'
+
+  - id: openmodels-functions-delete
+    title: openmodels functions delete
+    product: 'functions'
+
+  - id: openmodels-domains
+    title: openmodels domains
+    product: 'domains'
+
+  - id: openmodels-domains-reverify
+    title: openmodels domains reverify
+    product: 'domains'
+
+  - id: openmodels-domains-get
+    title: openmodels domains get
+    product: 'domains'
+
+  - id: openmodels-domains-delete
+    title: openmodels domains delete
+    product: 'domains'
+
+  - id: openmodels-domains-create
+    title: openmodels domains create
+    product: 'domains'
+
+  - id: openmodels-domains-activate
+    title: openmodels domains activate
+    product: 'domains'
+
+  - id: openmodels-db
+    title: openmodels db
+    product: 'database'
+
+  - id: openmodels-db-reset
+    title: openmodels db reset
+    product: 'database'
+
+  - id: openmodels-db-remote
+    title: openmodels db remote
+    product: 'database'
+
+  - id: openmodels-db-remote-commit
+    title: openmodels db remote commit
+    product: 'database'
+
+  - id: openmodels-db-remote-changes
+    title: openmodels db remote changes
+    product: 'database'
+
+  - id: openmodels-db-push
+    title: openmodels db push
+    product: 'database'
+
+  - id: openmodels-db-lint
+    title: openmodels db lint
+    product: 'database'
+
+  - id: openmodels-db-diff
+    title: openmodels db diff
+    product: 'database'
+
+  - id: openmodels-completion
+    title: openmodels completion
+    product: 'completion'
+
+  - id: openmodels-completion-zsh
+    title: openmodels completion zsh
+    product: 'completion'
+
+  - id: openmodels-completion-powershell
+    title: openmodels completion powershell
+    product: 'completion'
+
+  - id: openmodels-completion-fish
+    title: openmodels completion fish
+    product: 'completion'
+
+  - id: openmodels-completion-bash
+    title: openmodels completion bash
+    product: 'completion'
+
+  - id: openmodels-sso
+    title: openmodels sso
+    product: 'auth'
+
+  - id: openmodels-sso-add
+    title: openmodels sso add
+    product: 'auth'
+
+  - id: openmodels-sso-remove
+    title: openmodels sso remove
+    product: 'auth'
+
+  - id: openmodels-sso-update
+    title: openmodels sso update
+    product: 'auth'
+
+  - id: openmodels-sso-list
+    title: openmodels sso list
+    product: 'auth'
+
+  - id: openmodels-sso-show
+    title: openmodels sso show
+    product: 'auth'
